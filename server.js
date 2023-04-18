@@ -17,6 +17,7 @@ const Environment = process.env.NODE_ENV || config.ENVIROMENT
 
 //Route Imports
 const csv = require('./modules/csv/route')
+const user = require('./modules/user/route')
 
 //logger
 app.use(bodyParser.json())
@@ -66,6 +67,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Routes for all the different modules 
 app.use("/main", csv);
+app.use("/user", user)
 
 //server Port
 app.listen(PORT, () => {
