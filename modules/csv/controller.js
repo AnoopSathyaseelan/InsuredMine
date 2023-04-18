@@ -42,15 +42,6 @@ exports.saveFilesINtoMongoDB = async (req, res) => {
                     Return_message: "Data Read Error"
                 })
             });
-
     }
-
-
-
 }
-//to save the read data to mongodb
-async function saveDataToDb(data) {
-
-}
-
 
