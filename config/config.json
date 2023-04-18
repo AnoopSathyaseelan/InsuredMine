@@ -2,6 +2,7 @@
     "PORT":"3000",
     "JWT_SECRET_KEY":"NODEJS_2021_TEMPLATE",
     "ENVIROMENT":"DEV",
-    "EMAIL_ID":"adsdtestinganoop@gmail.com",
-    "EMAIL_PASSWORD":"ldcerpjjlqwejccf"
+    "EMAIL_ID":"",
+    "EMAIL_PASSWORD":"",
+    "MONGODBURL":"mongodb+srv://Test:test@cluster0.jzrdk3k.mongodb.net/?retryWrites=true&w=majority"
 }
