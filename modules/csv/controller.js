@@ -21,18 +21,15 @@ exports.saveFilesINtoMongoDB = async (req, res) => {
         const collection = db.collection('userdata');
 
         // Read CSV file and save data to MongoDB
-        let count = 0;
         fs.createReadStream(req.file.path)
             .pipe(csv())
             .on('data', async (data) => {
                 await collection.insertOne(data);
-                count++;
             })
             .on('end', () => {
                 fs.unlinkSync(req.file.path);
                 res.status(200).send({
                     Return_Status: 10000,
-                    NoOfRows: count,
                     Return_message: "Data Saved Successfully"
                 })
             })
