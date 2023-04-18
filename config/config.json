@@ -1,0 +1,7 @@
+{
+    "PORT":"3000",
+    "JWT_SECRET_KEY":"NODEJS_2021_TEMPLATE",
+    "ENVIROMENT":"DEV",
+    "EMAIL_ID":"adsdtestinganoop@gmail.com",
+    "EMAIL_PASSWORD":"ldcerpjjlqwejccf"
+}
