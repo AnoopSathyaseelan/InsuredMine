@@ -19,6 +19,7 @@ const Environment = process.env.NODE_ENV || config.ENVIROMENT
 const csv = require('./modules/csv/route')
 const user = require('./modules/user/route')
 const account = require('./modules/account/route')
+const policy = require('./modules/policy/route')
 
 //logger
 app.use(bodyParser.json())
@@ -70,6 +71,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/main", csv);
 app.use("/user", user)
 app.use("/useraccount", account)
+app.use("/policy", policy)
 
 //server Port
 app.listen(PORT, () => {
