@@ -79,6 +79,7 @@ exports.UpdatePolicy = async (req, res) => {
         $set: {
             customer_id: customer_id,
             policy_name: policy_name,
+            nominee: nominee,
             modifiedAt: moment().format('MMMM Do YYYY, h:mm:ss a')
         }
     }
