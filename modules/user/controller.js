@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb');
 const moment = require('moment');
+const ObjectId = require('mongodb').ObjectId;
 
 const {
     MONGODBURL
@@ -28,10 +29,11 @@ exports.addUsers = async (req, res) => {
         modifiedAt: moment().format('MMMM Do YYYY, h:mm:ss a')
     }
     let result = await collection.insertOne(userdata);
+    let userID = await collection.findOne({ "_id": result.insertedId });
     res.status(200).send({
         Return_Status: 10000,
         Return_message: "User Added Successfully",
-        _id: result.insertedId.toString()
+        customer_id: userID.customer_id
     })
 
 
