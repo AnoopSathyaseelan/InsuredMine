@@ -4,11 +4,13 @@
   "description": "Assignemnt",
   "main": "server.js",
   "scripts": {
+    "build":"rimraf ./build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon",
     "start": "node server.js set NODE_ENV=DEV",
     "start_uat": "node server.js set NODE_ENV=UAT ",
     "start_PROD": " node server.js set NODE_ENV=PROD"
+    
   },
   "repository": {
     "type": "git",
